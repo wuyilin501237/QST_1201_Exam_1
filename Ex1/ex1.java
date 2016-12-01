@@ -1,3 +1,5 @@
+package Text;
+
 public class QSTLinkList 
 {
 	public static class Node{
@@ -15,8 +17,11 @@ public class QSTLinkList
 		}
 	}
 	private static void printLinkList(Node head) {
+		System.out.print(head.value+"->");
+		if(head.next != null)
+			printLinkList(head.next);
 	}
-  
+
   public static void main( String[] args ){
     int[] arr = {1,3,5,7,2,4};
     Node head = createLinkList(arr);
